@@ -1,11 +1,10 @@
 import { defineAbilityFor } from '@sass/auth'
+import { projectSchema } from '@sass/auth/src/models/project'
 
-const ability = defineAbilityFor({ role: 'MEMBER' })
+const ability = defineAbilityFor({ role: 'MEMBER', id: 'user-id' })
 
-const userCanInvaitSomeoneElse = ability.can('invite', 'User')
-const userCanDeleteOtherUser = ability.can('delete', 'User')
+const project = projectSchema.parse({ id: 'project-id', ownerId: 'user-id' })
 
-const userCannotDeleteOthersUsers = ability.cannot('delete', 'User')
-
-console.log(userCanInvaitSomeoneElse, userCanDeleteOtherUser)
-console.log(userCannotDeleteOthersUsers)
+console.log(ability.can('get', 'Billing'))
+console.log(ability.can('create', 'Invate'))
+console.log(ability.can('delete', project))
