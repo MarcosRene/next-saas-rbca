@@ -1,0 +1,23 @@
+{
+  "name": "@sass/api",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@sass/auth": "workspace:*"
+  },
+  "devDependencies": {
+    "@sass/eslint-config": "workspace:*",
+    "@sass/prettier": "workspace:*",
+    "@sass/tsconfig": "workspace:*",
+    "@types/node": "^20.12.7",
+    "tsx": "^4.7.2"
+  },
+  "prettier": "@sass/prettier",
+  "eslintConfig": {
+    "extends": [
+      "@sass/eslint-config/node"
+    ]
+  }
+}
