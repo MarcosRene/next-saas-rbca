@@ -16,7 +16,9 @@ importers:
       '@sass/eslint-config': workspace:*
       '@sass/prettier': workspace:*
       '@sass/tsconfig': workspace:*
+      '@types/bcryptjs': ^2.4.6
       '@types/node': ^20.12.7
+      bcryptjs: ^2.4.3
       fastify: ^4.26.2
       fastify-type-provider-zod: ^1.1.9
       prisma: ^5.13.0
@@ -26,6 +28,7 @@ importers:
       '@fastify/cors': 9.0.1
       '@prisma/client': 5.13.0_prisma@5.13.0
       '@sass/auth': link:../../packages/auth
+      bcryptjs: 2.4.3
       fastify: 4.26.2
       fastify-type-provider-zod: 1.1.9_fastify@4.26.2+zod@3.22.4
       zod: 3.22.4
@@ -33,6 +36,7 @@ importers:
       '@sass/eslint-config': link:../../config/eslint-config
       '@sass/prettier': link:../../config/prettier
       '@sass/tsconfig': link:../../config/typescript-config
+      '@types/bcryptjs': 2.4.6
       '@types/node': 20.12.7
       prisma: 5.13.0
       tsx: 4.7.2
@@ -485,6 +489,10 @@ packages:
       - supports-color
     dev: true
 
+  /@types/bcryptjs/2.4.6:
+    resolution: {integrity: sha512-9xlo6R2qDs5uixm0bcIqCeMCE6HiQsIyel9KQySStiyqNl2tnj2mP3DX1Nf56MD6KMenNNlBBsy3LJ7gUEQPXQ==}
+    dev: true
+
   /@types/json-schema/7.0.15:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
     dev: true
@@ -892,6 +900,10 @@ packages:
 
   /base64-js/1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
+    dev: false
+
+  /bcryptjs/2.4.3:
+    resolution: {integrity: sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==}
     dev: false
 
   /brace-expansion/1.1.11:
