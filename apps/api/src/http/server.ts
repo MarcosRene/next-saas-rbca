@@ -10,6 +10,8 @@ import {
   ZodTypeProvider,
 } from 'fastify-type-provider-zod'
 
+import { env } from '@sass/env'
+
 import { createAccount } from './routes/auth/createAccount'
 import { authenticateWithPassword } from './routes/auth/authenticateWithPassword'
 import { authenticateWithGithub } from './routes/auth/authenticateWithGithub'
@@ -17,7 +19,7 @@ import { getProfile } from './routes/auth/getProfile'
 import { errorHandler } from './errorHandler'
 import { requestPasswordRecover } from './routes/auth/requestPasswordRecover'
 import { resetPassword } from './routes/auth/resetPassword'
-import { env } from '@sass/env'
+import { createOrganization } from './routes/orgs/createOrganization'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -62,6 +64,8 @@ app.register(authenticateWithGithub)
 app.register(getProfile)
 app.register(requestPasswordRecover)
 app.register(resetPassword)
+
+app.register(createOrganization)
 
 app
   .listen({
