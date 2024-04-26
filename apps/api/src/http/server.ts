@@ -12,6 +12,7 @@ import {
 
 import { createAccount } from './routes/auth/createAccount'
 import { authenticateWithPassword } from './routes/auth/authenticateWithPassword'
+import { authenticateWithGithub } from './routes/auth/authenticateWithGithub'
 import { getProfile } from './routes/auth/getProfile'
 import { errorHandler } from './errorHandler'
 import { requestPasswordRecover } from './routes/auth/requestPasswordRecover'
@@ -48,6 +49,7 @@ app.register(fastifyCors)
 
 app.register(createAccount)
 app.register(authenticateWithPassword)
+app.register(authenticateWithGithub)
 app.register(getProfile)
 app.register(requestPasswordRecover)
 app.register(resetPassword)
