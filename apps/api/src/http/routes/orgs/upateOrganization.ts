@@ -10,7 +10,7 @@ import { getUserPermissions } from '@/utils/getUserPermissions'
 import { UnauthorizedError } from '../_errors/unauthorizedError'
 import { BadRequestError } from '../_errors/bagRequestError'
 
-export async function updateOrganizations(app: FastifyInstance) {
+export async function updateOrganization(app: FastifyInstance) {
   app.withTypeProvider<ZodTypeProvider>().register(auth).put('/organizations/:slug', {
     schema: {
       tags: ['Organizations'],
