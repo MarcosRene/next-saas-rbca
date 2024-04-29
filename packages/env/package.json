@@ -1,18 +1,18 @@
 {
-  "name": "@sass/env",
+  "name": "@saas/env",
   "version": "0.0.0",
   "private": true,
   "main": "index.ts",
   "types": "index.ts",
   "devDependencies": {
-    "@sass/eslint-config": "workspace:*",
-    "@sass/prettier": "workspace:*",
-    "@sass/tsconfig": "workspace:*"
+    "@saas/eslint-config": "workspace:*",
+    "@saas/prettier": "workspace:*",
+    "@saas/tsconfig": "workspace:*"
   },
-  "prettier": "@sass/prettier",
+  "prettier": "@saas/prettier",
   "eslintConfig": {
     "extends": [
-      "@sass/eslint-config/library"
+      "@saas/eslint-config/library"
     ]
   },
   "dependencies": {

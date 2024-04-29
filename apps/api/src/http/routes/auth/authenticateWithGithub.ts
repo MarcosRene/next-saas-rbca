@@ -5,7 +5,7 @@ import { z } from 'zod'
 
 import { prisma } from "@/lib/prisma";
 import { BadRequestError } from '../_errors/bagRequestError';
-import { env } from '@sass/env';
+import { env } from '@saas/env';
 
 export async function authenticateWithGithub(app: FastifyInstance) {
   app.withTypeProvider<ZodTypeProvider>().post('/sessions/github', {

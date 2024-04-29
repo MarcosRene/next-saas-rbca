@@ -10,7 +10,7 @@ import {
   ZodTypeProvider,
 } from 'fastify-type-provider-zod'
 
-import { env } from '@sass/env'
+import { env } from '@saas/env'
 
 import { createAccount } from './routes/auth/createAccount'
 import { authenticateWithPassword } from './routes/auth/authenticateWithPassword'
@@ -21,6 +21,8 @@ import { requestPasswordRecover } from './routes/auth/requestPasswordRecover'
 import { resetPassword } from './routes/auth/resetPassword'
 import { createOrganization } from './routes/orgs/createOrganization'
 import { getMembership } from './routes/orgs/getMembership'
+import { getOrganization } from './routes/orgs/getOraganization'
+import { getOrganizations } from './routes/orgs/getOrganizations'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -68,6 +70,8 @@ app.register(resetPassword)
 
 app.register(createOrganization)
 app.register(getMembership)
+app.register(getOrganization)
+app.register(getOrganizations)
 
 app
   .listen({
