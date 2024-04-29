@@ -20,6 +20,7 @@ import { errorHandler } from './errorHandler'
 import { requestPasswordRecover } from './routes/auth/requestPasswordRecover'
 import { resetPassword } from './routes/auth/resetPassword'
 import { createOrganization } from './routes/orgs/createOrganization'
+import { getMembership } from './routes/orgs/getMembership'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -66,6 +67,7 @@ app.register(requestPasswordRecover)
 app.register(resetPassword)
 
 app.register(createOrganization)
+app.register(getMembership)
 
 app
   .listen({
