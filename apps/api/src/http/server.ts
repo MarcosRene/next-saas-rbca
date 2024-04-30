@@ -12,11 +12,12 @@ import {
 
 import { env } from '@saas/env'
 
+import { errorHandler } from './errorHandler'
+
 import { createAccount } from './routes/auth/createAccount'
 import { authenticateWithPassword } from './routes/auth/authenticateWithPassword'
 import { authenticateWithGithub } from './routes/auth/authenticateWithGithub'
 import { getProfile } from './routes/auth/getProfile'
-import { errorHandler } from './errorHandler'
 import { requestPasswordRecover } from './routes/auth/requestPasswordRecover'
 import { resetPassword } from './routes/auth/resetPassword'
 import { createOrganization } from './routes/orgs/createOrganization'
@@ -28,6 +29,7 @@ import { shutdownOrganization } from './routes/orgs/shutdownOrganization'
 import { transferOrganization } from './routes/orgs/transferOrganization'
 import { createProject } from './routes/projects/createProject'
 import { deleteProject } from './routes/projects/deleteProject'
+import { getProject } from './routes/projects/getProject'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -83,6 +85,7 @@ app.register(transferOrganization)
 
 app.register(createProject)
 app.register(deleteProject)
+app.register(getProject)
 
 app
   .listen({
