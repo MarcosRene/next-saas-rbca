@@ -1,13 +1,13 @@
 import { z } from 'zod'
 
-export const invateSubject = z.tuple([
+export const inviteSubject = z.tuple([
   z.union([
     z.literal('manage'),
     z.literal('get'),
     z.literal('create'),
     z.literal('revoke'),
   ]),
-  z.literal('Invate'),
+  z.literal('Invite'),
 ])
 
-export type InvateSubject = z.infer<typeof invateSubject>
+export type InvateSubject = z.infer<typeof inviteSubject>

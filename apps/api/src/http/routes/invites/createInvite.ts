@@ -37,7 +37,7 @@ export async function createInvite(app: FastifyInstance) {
 
     const { cannot } = getUserPermissions(userId, membership.role)
 
-    if (cannot('create', 'Invate')) {
+    if (cannot('create', 'Invite')) {
       throw new UnauthorizedError(`You're not allowed to create new invites.`)
     }
 
