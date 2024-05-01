@@ -3,16 +3,17 @@ import type { ZodTypeProvider } from 'fastify-type-provider-zod'
 import { z } from 'zod'
 
 import { auth } from '@/http/middlewares/auth'
+import { prisma } from '@/lib/prisma'
+
 import { getUserPermissions } from '@/utils/getUserPermissions'
 import { UnauthorizedError } from '../_errors/unauthorizedError'
-import { prisma } from '@/lib/prisma'
 
 export async function getOrganizationBilling(app: FastifyInstance) {
   app
     .withTypeProvider<ZodTypeProvider>()
     .register(auth)
     .get(
-      '/organizations/:slug',
+      '/organizations/:slug/billing',
       {
         schema: {
           tags: ['Billing'],
