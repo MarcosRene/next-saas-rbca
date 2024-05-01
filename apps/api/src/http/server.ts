@@ -35,7 +35,8 @@ import { updateProject } from './routes/projects/updateProject'
 import { getMembers } from './routes/members/getMembers'
 import { updateMember } from './routes/members/updateMember'
 import { removeMember } from './routes/members/removeMember'
-import { createInvite } from './routes/invites/createInvites'
+import { createInvite } from './routes/invites/createInvite'
+import { getInvite } from './routes/invites/getInvite'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -100,6 +101,7 @@ app.register(updateMember)
 app.register(removeMember)
 
 app.register(createInvite)
+app.register(getInvite)
 
 app
   .listen({
