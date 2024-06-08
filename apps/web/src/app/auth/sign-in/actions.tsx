@@ -1,6 +1,7 @@
 'use server'
 
 import { HTTPError } from 'ky'
+import { cookies } from 'next/headers'
 import { z } from 'zod'
 
 import { signInWithPassword } from '@/http/sign-in-with-password'
@@ -33,7 +34,10 @@ export async function signInWithEmailAndPassword(data: FormData) {
       password,
     })
 
-    console.log(token)
+    cookies().set('token', token, {
+      maxAge: 60 * 60 * 24 * 7, // 7 Days
+      path: '/',
+    })
   } catch (error) {
     if (error instanceof HTTPError) {
       const { message } = await error.response.json()
