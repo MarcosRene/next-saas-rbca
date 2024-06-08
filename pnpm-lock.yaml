@@ -78,6 +78,7 @@ importers:
       tailwindcss: ^3.4.1
       tailwindcss-animate: ^1.0.7
       typescript: ^5
+      zod: ^3.22.4
     dependencies:
       '@radix-ui/react-label': 2.0.2_28d2685ba3ab097306fac2eaae8961ae
       '@radix-ui/react-separator': 1.0.3_28d2685ba3ab097306fac2eaae8961ae
@@ -91,6 +92,7 @@ importers:
       react-dom: 19.0.0-rc-f994737d14-20240522_c1f0a4aac925d6b31970f53733fd2a64
       tailwind-merge: 2.3.0
       tailwindcss-animate: 1.0.7_tailwindcss@3.4.4
+      zod: 3.23.4
     devDependencies:
       '@saas/eslint-config': link:../../config/eslint-config
       '@saas/prettier': link:../../config/prettier
