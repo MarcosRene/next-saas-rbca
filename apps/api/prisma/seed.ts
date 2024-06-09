@@ -1,8 +1,8 @@
+import { faker } from '@faker-js/faker'
 import { PrismaClient } from '@prisma/client'
-import { faker }  from '@faker-js/faker'
 import { hash } from 'bcryptjs'
 
-const primsa = new PrismaClient() 
+const primsa = new PrismaClient()
 
 async function seed() {
   await primsa.organization.deleteMany()
@@ -16,7 +16,7 @@ async function seed() {
       email: 'john@acme.com',
       avatarUrl: 'https://github.com/MarcosRene.png',
       passwordHash,
-    }
+    },
   })
 
   const anotherUser = await primsa.user.create({
@@ -25,7 +25,7 @@ async function seed() {
       email: faker.internet.email(),
       avatarUrl: faker.image.avatarGitHub(),
       passwordHash,
-    }
+    },
   })
 
   const anotherUserTwo = await primsa.user.create({
@@ -34,7 +34,7 @@ async function seed() {
       email: faker.internet.email(),
       avatarUrl: faker.image.avatarGitHub(),
       passwordHash,
-    }
+    },
   })
 
   await primsa.organization.create({
@@ -56,8 +56,8 @@ async function seed() {
               ownerId: faker.helpers.arrayElement([
                 user.id,
                 anotherUser.id,
-                anotherUserTwo.id
-              ])
+                anotherUserTwo.id,
+              ]),
             },
             {
               name: faker.lorem.words(5),
@@ -67,8 +67,8 @@ async function seed() {
               ownerId: faker.helpers.arrayElement([
                 user.id,
                 anotherUser.id,
-                anotherUserTwo.id
-              ])
+                anotherUserTwo.id,
+              ]),
             },
             {
               name: faker.lorem.words(5),
@@ -78,31 +78,31 @@ async function seed() {
               ownerId: faker.helpers.arrayElement([
                 user.id,
                 anotherUser.id,
-                anotherUserTwo.id
-              ])
-            }
-          ]
-        }
+                anotherUserTwo.id,
+              ]),
+            },
+          ],
+        },
       },
       members: {
         createMany: {
           data: [
             {
               userId: user.id,
-              role: 'ADMIN'
+              role: 'ADMIN',
             },
             {
               userId: anotherUser.id,
-              role: 'MEMBER'
+              role: 'MEMBER',
             },
             {
               userId: anotherUserTwo.id,
-              role: 'MEMBER'
-            }
-          ]
-        }
-      }
-    }
+              role: 'MEMBER',
+            },
+          ],
+        },
+      },
+    },
   })
 
   await primsa.organization.create({
@@ -122,8 +122,8 @@ async function seed() {
               ownerId: faker.helpers.arrayElement([
                 user.id,
                 anotherUser.id,
-                anotherUserTwo.id
-              ])
+                anotherUserTwo.id,
+              ]),
             },
             {
               name: faker.lorem.words(5),
@@ -133,8 +133,8 @@ async function seed() {
               ownerId: faker.helpers.arrayElement([
                 user.id,
                 anotherUser.id,
-                anotherUserTwo.id
-              ])
+                anotherUserTwo.id,
+              ]),
             },
             {
               name: faker.lorem.words(5),
@@ -144,31 +144,31 @@ async function seed() {
               ownerId: faker.helpers.arrayElement([
                 user.id,
                 anotherUser.id,
-                anotherUserTwo.id
-              ])
-            }
-          ]
-        }
+                anotherUserTwo.id,
+              ]),
+            },
+          ],
+        },
       },
       members: {
         createMany: {
           data: [
             {
               userId: user.id,
-              role: 'MEMBER'
+              role: 'MEMBER',
             },
             {
               userId: anotherUser.id,
-              role: 'ADMIN'
+              role: 'ADMIN',
             },
             {
               userId: anotherUserTwo.id,
-              role: 'MEMBER'
-            }
-          ]
-        }
-      }
-    }
+              role: 'MEMBER',
+            },
+          ],
+        },
+      },
+    },
   })
 
   await primsa.organization.create({
@@ -188,8 +188,8 @@ async function seed() {
               ownerId: faker.helpers.arrayElement([
                 user.id,
                 anotherUser.id,
-                anotherUserTwo.id
-              ])
+                anotherUserTwo.id,
+              ]),
             },
             {
               name: faker.lorem.words(5),
@@ -199,8 +199,8 @@ async function seed() {
               ownerId: faker.helpers.arrayElement([
                 user.id,
                 anotherUser.id,
-                anotherUserTwo.id
-              ])
+                anotherUserTwo.id,
+              ]),
             },
             {
               name: faker.lorem.words(5),
@@ -210,31 +210,31 @@ async function seed() {
               ownerId: faker.helpers.arrayElement([
                 user.id,
                 anotherUser.id,
-                anotherUserTwo.id
-              ])
-            }
-          ]
-        }
+                anotherUserTwo.id,
+              ]),
+            },
+          ],
+        },
       },
       members: {
         createMany: {
           data: [
             {
               userId: user.id,
-              role: 'BILLING'
+              role: 'BILLING',
             },
             {
               userId: anotherUser.id,
-              role: 'ADMIN'
+              role: 'ADMIN',
             },
             {
               userId: anotherUserTwo.id,
-              role: 'MEMBER'
-            }
-          ]
-        }
-      }
-    }
+              role: 'MEMBER',
+            },
+          ],
+        },
+      },
+    },
   })
 }
 

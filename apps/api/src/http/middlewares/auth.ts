@@ -1,9 +1,11 @@
-import type { FastifyInstance } from "fastify";
-import { fastifyPlugin } from "fastify-plugin";
-import { UnauthorizedError } from "../routes/_errors/unauthorizedError";
-import { prisma } from "@/lib/prisma";
+import type { FastifyInstance } from 'fastify'
+import { fastifyPlugin } from 'fastify-plugin'
 
-export const auth = fastifyPlugin(async (app: FastifyInstance) => {  
+import { prisma } from '@/lib/prisma'
+
+import { UnauthorizedError } from '../routes/_errors/unauthorizedError'
+
+export const auth = fastifyPlugin(async (app: FastifyInstance) => {
   app.addHook('preHandler', async (request) => {
     request.getCurrentUserId = async () => {
       try {
@@ -17,17 +19,17 @@ export const auth = fastifyPlugin(async (app: FastifyInstance) => {
 
     request.getUserMemberShip = async (slug: string) => {
       const userId = await request.getCurrentUserId()
-      
+
       const member = await prisma.member.findFirst({
         where: {
           userId,
           organization: {
-            slug
-          }
+            slug,
+          },
         },
         include: {
           organization: true,
-        }
+        },
       })
 
       if (!member) {
@@ -35,10 +37,10 @@ export const auth = fastifyPlugin(async (app: FastifyInstance) => {
       }
 
       const { organization, ...membership } = member
-      
+
       return {
         organization,
-        membership
+        membership,
       }
     }
   })

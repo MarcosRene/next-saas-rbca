@@ -63,6 +63,7 @@ importers:
       '@radix-ui/react-separator': ^1.0.3
       '@radix-ui/react-slot': ^1.0.2
       '@saas/auth': workspace:*
+      '@saas/env': workspace:*
       '@saas/eslint-config': workspace:*
       '@saas/prettier': workspace:*
       '@saas/tsconfig': workspace:*
@@ -72,6 +73,7 @@ importers:
       class-variance-authority: ^0.7.0
       clsx: ^2.1.1
       cookies-next: ^4.2.1
+      dotenv-cli: ^7.4.1
       ky: ^1.3.0
       lucide-react: ^0.390.0
       next: 15.0.0-rc.0
@@ -91,6 +93,7 @@ importers:
       '@radix-ui/react-separator': 1.0.3_28d2685ba3ab097306fac2eaae8961ae
       '@radix-ui/react-slot': 1.0.2_33f8a78333d39e792d8bea208e397308
       '@saas/auth': link:../../packages/auth
+      '@saas/env': link:../../packages/env
       class-variance-authority: 0.7.0
       clsx: 2.1.1
       cookies-next: 4.2.1
@@ -110,6 +113,7 @@ importers:
       '@types/node': 20.12.7
       '@types/react': 18.3.3
       '@types/react-dom': 18.3.0
+      dotenv-cli: 7.4.1
       postcss: 8.4.38
       tailwindcss: 3.4.4
       typescript: 5.4.5
