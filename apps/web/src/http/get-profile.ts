@@ -4,7 +4,7 @@ type User = {
   id: string
   name: string | null
   email: string
-  avatarURL: string | null
+  avatarUrl: string | null
 }
 
 interface GetProfileResponse {
