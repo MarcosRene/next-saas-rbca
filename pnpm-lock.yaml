@@ -62,6 +62,7 @@ importers:
       '@radix-ui/react-label': ^2.0.2
       '@radix-ui/react-separator': ^1.0.3
       '@radix-ui/react-slot': ^1.0.2
+      '@saas/auth': workspace:*
       '@saas/eslint-config': workspace:*
       '@saas/prettier': workspace:*
       '@saas/tsconfig': workspace:*
@@ -88,6 +89,7 @@ importers:
       '@radix-ui/react-label': 2.0.2_28d2685ba3ab097306fac2eaae8961ae
       '@radix-ui/react-separator': 1.0.3_28d2685ba3ab097306fac2eaae8961ae
       '@radix-ui/react-slot': 1.0.2_33f8a78333d39e792d8bea208e397308
+      '@saas/auth': link:../../packages/auth
       class-variance-authority: 0.7.0
       clsx: 2.1.1
       cookies-next: 4.2.1
