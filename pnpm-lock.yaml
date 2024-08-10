@@ -6,7 +6,7 @@ importers:
     specifiers:
       turbo: latest
     devDependencies:
-      turbo: 2.0.3
+      turbo: 2.0.12
 
   apps/api:
     specifiers:
@@ -59,6 +59,7 @@ importers:
     specifiers:
       '@radix-ui/react-avatar': ^1.0.4
       '@radix-ui/react-checkbox': ^1.0.4
+      '@radix-ui/react-dialog': ^1.0.5
       '@radix-ui/react-dropdown-menu': ^2.0.6
       '@radix-ui/react-label': ^2.0.2
       '@radix-ui/react-separator': ^1.0.3
@@ -68,6 +69,7 @@ importers:
       '@saas/eslint-config': workspace:*
       '@saas/prettier': workspace:*
       '@saas/tsconfig': workspace:*
+      '@tanstack/react-query': ^5.51.23
       '@types/node': ^20
       '@types/react': ^18
       '@types/react-dom': ^18
@@ -90,12 +92,14 @@ importers:
     dependencies:
       '@radix-ui/react-avatar': 1.0.4_28d2685ba3ab097306fac2eaae8961ae
       '@radix-ui/react-checkbox': 1.0.4_28d2685ba3ab097306fac2eaae8961ae
+      '@radix-ui/react-dialog': 1.0.5_28d2685ba3ab097306fac2eaae8961ae
       '@radix-ui/react-dropdown-menu': 2.0.6_28d2685ba3ab097306fac2eaae8961ae
       '@radix-ui/react-label': 2.0.2_28d2685ba3ab097306fac2eaae8961ae
       '@radix-ui/react-separator': 1.0.3_28d2685ba3ab097306fac2eaae8961ae
       '@radix-ui/react-slot': 1.0.2_33f8a78333d39e792d8bea208e397308
       '@saas/auth': link:../../packages/auth
       '@saas/env': link:../../packages/env
+      '@tanstack/react-query': 5.51.23_c1f0a4aac925d6b31970f53733fd2a64
       class-variance-authority: 0.7.0
       clsx: 2.1.1
       cookies-next: 4.2.1
@@ -1111,6 +1115,40 @@ packages:
       react: 19.0.0-rc-f994737d14-20240522
     dev: false
 
+  /@radix-ui/react-dialog/1.0.5_28d2685ba3ab097306fac2eaae8961ae:
+    resolution: {integrity: sha512-GjWJX/AUpB703eEBanuBnIWdIXg6NvJFCXcNlSZk4xdszCdhrJgBoUd1cGk67vFO+WdA2pfI/plOpqz/5GUP6Q==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.24.4
+      '@radix-ui/primitive': 1.0.1
+      '@radix-ui/react-compose-refs': 1.0.1_33f8a78333d39e792d8bea208e397308
+      '@radix-ui/react-context': 1.0.1_33f8a78333d39e792d8bea208e397308
+      '@radix-ui/react-dismissable-layer': 1.0.5_28d2685ba3ab097306fac2eaae8961ae
+      '@radix-ui/react-focus-guards': 1.0.1_33f8a78333d39e792d8bea208e397308
+      '@radix-ui/react-focus-scope': 1.0.4_28d2685ba3ab097306fac2eaae8961ae
+      '@radix-ui/react-id': 1.0.1_33f8a78333d39e792d8bea208e397308
+      '@radix-ui/react-portal': 1.0.4_28d2685ba3ab097306fac2eaae8961ae
+      '@radix-ui/react-presence': 1.0.1_28d2685ba3ab097306fac2eaae8961ae
+      '@radix-ui/react-primitive': 1.0.3_28d2685ba3ab097306fac2eaae8961ae
+      '@radix-ui/react-slot': 1.0.2_33f8a78333d39e792d8bea208e397308
+      '@radix-ui/react-use-controllable-state': 1.0.1_33f8a78333d39e792d8bea208e397308
+      '@types/react': 18.3.3
+      '@types/react-dom': 18.3.0
+      aria-hidden: 1.2.4
+      react: 19.0.0-rc-f994737d14-20240522
+      react-dom: 19.0.0-rc-f994737d14-20240522_c1f0a4aac925d6b31970f53733fd2a64
+      react-remove-scroll: 2.5.5_33f8a78333d39e792d8bea208e397308
+    dev: false
+
   /@radix-ui/react-direction/1.0.1_33f8a78333d39e792d8bea208e397308:
     resolution: {integrity: sha512-RXcvnXgyvYvBEOhCBuddKecVkoMiI10Jcm5cTI7abJRAHYfFxeu+FBQs/DvdxSYucxR5mna0dNsL6QFlds5TMA==}
     peerDependencies:
@@ -1610,6 +1648,19 @@ packages:
     dependencies:
       '@t3-oss/env-core': 0.10.1_zod@3.23.4
       zod: 3.23.4
+    dev: false
+
+  /@tanstack/query-core/5.51.21:
+    resolution: {integrity: sha512-POQxm42IUp6n89kKWF4IZi18v3fxQWFRolvBA6phNVmA8psdfB1MvDnGacCJdS+EOX12w/CyHM62z//rHmYmvw==}
+    dev: false
+
+  /@tanstack/react-query/5.51.23_c1f0a4aac925d6b31970f53733fd2a64:
+    resolution: {integrity: sha512-CfJCfX45nnVIZjQBRYYtvVMIsGgWLKLYC4xcUiYEey671n1alvTZoCBaU9B85O8mF/tx9LPyrI04A6Bs2THv4A==}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
+      '@tanstack/query-core': 5.51.21
+      react: 19.0.0-rc-f994737d14-20240522
     dev: false
 
   /@types/bcryptjs/2.4.6:
@@ -2216,6 +2267,7 @@ packages:
 
   /color-name/1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+    requiresBuild: true
 
   /color-string/1.9.1:
     resolution: {integrity: sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==}
@@ -3697,6 +3749,7 @@ packages:
   /lru-cache/6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
     engines: {node: '>=10'}
+    requiresBuild: true
     dependencies:
       yallist: 4.0.0
 
@@ -4499,6 +4552,7 @@ packages:
     resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
     engines: {node: '>=10'}
     hasBin: true
+    requiresBuild: true
     dependencies:
       lru-cache: 6.0.0
 
@@ -4894,64 +4948,64 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /turbo-darwin-64/2.0.3:
-    resolution: {integrity: sha512-v7ztJ8sxdHw3SLfO2MhGFeeU4LQhFii1hIGs9uBiXns/0YTGOvxLeifnfGqhfSrAIIhrCoByXO7nR9wlm10n3Q==}
+  /turbo-darwin-64/2.0.12:
+    resolution: {integrity: sha512-NAgfgbXxX/JScWQmmQnGbPuFZq7LIswHfcMk5JwyBXQM/xmklNOxxac7MnGGIOf19Z2f6S3qHy17VIj0SeGfnA==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-darwin-arm64/2.0.3:
-    resolution: {integrity: sha512-LUcqvkV9Bxtng6QHbevp8IK8zzwbIxM6HMjCE7FEW6yJBN1KwvTtRtsGBwwmTxaaLO0wD1Jgl3vgkXAmQ4fqUw==}
+  /turbo-darwin-arm64/2.0.12:
+    resolution: {integrity: sha512-cP02uer5KSJ+fXL+OfRRk5hnVjV0c60hxDgNcJxrZpfhun7HHoKDDR7w2xhQntiA45aC6ZZEXRqMKpj6GAmKbg==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-64/2.0.3:
-    resolution: {integrity: sha512-xpdY1suXoEbsQsu0kPep2zrB8ijv/S5aKKrntGuQ62hCiwDFoDcA/Z7FZ8IHQ2u+dpJARa7yfiByHmizFE0r5Q==}
+  /turbo-linux-64/2.0.12:
+    resolution: {integrity: sha512-+mQgGfg1eq5qF+wenK/FKJaNMNAo5DQLC4htQy+8osW+fx6U+8+6UlPQPaycAWDEqwOI7NwuqkeHfkEQLQUTyQ==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-arm64/2.0.3:
-    resolution: {integrity: sha512-MBACTcSR874L1FtLL7gkgbI4yYJWBUCqeBN/iE29D+8EFe0d3fAyviFlbQP4K/HaDYet1i26xkkOiWr0z7/V9A==}
+  /turbo-linux-arm64/2.0.12:
+    resolution: {integrity: sha512-KFyEZDXfPU1DK4zimxdCcqAcK7IIttX4mfsgB7NsSEOmH0dhHOih/YFYiyEDC1lTRx0C2RlzQ0Kjjdz48AN5Eg==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-64/2.0.3:
-    resolution: {integrity: sha512-zi3YuKPkM9JxMTshZo3excPk37hUrj5WfnCqh4FjI26ux6j/LJK+Dh3SebMHd9mR7wP9CMam4GhmLCT+gDfM+w==}
+  /turbo-windows-64/2.0.12:
+    resolution: {integrity: sha512-kJj4KCkZTkDTDCqsSw1m1dbO4WeoQq1mYUm/thXOH0OkeqYbSMt0EyoTcJOgKUDsrMnzZD2gPfYrlYHtV69lVA==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-arm64/2.0.3:
-    resolution: {integrity: sha512-wmed4kkenLvRbidi7gISB4PU77ujBuZfgVGDZ4DXTFslE/kYpINulwzkVwJIvNXsJtHqyOq0n6jL8Zwl3BrwDg==}
+  /turbo-windows-arm64/2.0.12:
+    resolution: {integrity: sha512-TY3ROxguDilN2olCwcZMaePdW01Xhma0pZU7bNhsQEqca9RGAmsZBuzfGnTMcWPmv4tpnb/PlX1hrt1Hod/44Q==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo/2.0.3:
-    resolution: {integrity: sha512-jF1K0tTUyryEWmgqk1V0ALbSz3VdeZ8FXUo6B64WsPksCMCE48N5jUezGOH2MN0+epdaRMH8/WcPU0QQaVfeLA==}
+  /turbo/2.0.12:
+    resolution: {integrity: sha512-8s2KwqjwQj7z8Z53SUZSKVkQOZ2/Sl4D2F440oaBY/k2lGju60dW6srEpnn8/RIDeICZmQn3pQHF79Jfnc5Skw==}
     hasBin: true
     optionalDependencies:
-      turbo-darwin-64: 2.0.3
-      turbo-darwin-arm64: 2.0.3
-      turbo-linux-64: 2.0.3
-      turbo-linux-arm64: 2.0.3
-      turbo-windows-64: 2.0.3
-      turbo-windows-arm64: 2.0.3
+      turbo-darwin-64: 2.0.12
+      turbo-darwin-arm64: 2.0.12
+      turbo-linux-64: 2.0.12
+      turbo-linux-arm64: 2.0.12
+      turbo-windows-64: 2.0.12
+      turbo-windows-arm64: 2.0.12
     dev: true
 
   /type-check/0.4.0:
@@ -5157,6 +5211,7 @@ packages:
 
   /yallist/4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
+    requiresBuild: true
 
   /yaml/2.4.2:
     resolution: {integrity: sha512-B3VqDZ+JAg1nZpaEmWtTXUlBneoGx6CPM9b0TENK6aoSu5t73dItudwdgmi6tHlIZZId4dZ9skcAQ2UbcyAeVA==}
