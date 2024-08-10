@@ -67,13 +67,12 @@ export function OrganizationForm() {
       </div>
 
       <div className="space-y-1">
-        <div className="flex items-start space-x-2">
-          <div className="translate-y-0.5">
-            <Checkbox
-              name="shouldAttachUsersByDomain"
-              id="shouldAttachUsersByDomain"
-            />
-          </div>
+        <div className="flex space-x-2">
+          <Checkbox
+            name="shouldAttachUsersByDomain"
+            id="shouldAttachUsersByDomain"
+            className="mt-1"
+          />
           <label htmlFor="shouldAttachUsersByDomain" className="space-y-1">
             <span className="text-sm font-medium leading-none">
               Auto-join new members
