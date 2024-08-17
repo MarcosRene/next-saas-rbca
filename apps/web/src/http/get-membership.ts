@@ -13,7 +13,7 @@ interface GetMembershipResponses {
   membership: Membership
 }
 
-export async function getMemberships(orgSlug: string) {
+export async function getMembership(orgSlug: string) {
   const result = await api
     .get(`organizations/${orgSlug}/membership`)
     .json<GetMembershipResponses>()

@@ -2,7 +2,7 @@ import { defineAbilityFor } from '@saas/auth'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 
-import { getMemberships } from '@/http/get-membership'
+import { getMembership } from '@/http/get-membership'
 import { getProfile } from '@/http/get-profile'
 
 export function isAuthenticated() {
@@ -20,7 +20,7 @@ export async function getCurrentMembership() {
     return null
   }
 
-  const { membership } = await getMemberships(org)
+  const { membership } = await getMembership(org)
 
   return membership
 }
