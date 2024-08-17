@@ -4,16 +4,16 @@ import { z } from 'zod'
 
 import { auth } from '@/http/middlewares/auth'
 import { prisma } from '@/lib/prisma'
-
 import { getUserPermissions } from '@/utils/getUserPermissions'
-import { UnauthorizedError } from '../_errors/unauthorizedError'
+
 import { BadRequestError } from '../_errors/bagRequestError'
+import { UnauthorizedError } from '../_errors/unauthorizedError'
 
 export async function revokeInvite(app: FastifyInstance) {
   app
     .withTypeProvider<ZodTypeProvider>()
     .register(auth)
-    .post(
+    .delete(
       '/organizations/:slug/invites/:inviteId',
       {
         schema: {
