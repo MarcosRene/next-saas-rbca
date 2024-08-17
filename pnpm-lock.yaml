@@ -62,6 +62,7 @@ importers:
       '@radix-ui/react-dialog': ^1.0.5
       '@radix-ui/react-dropdown-menu': ^2.0.6
       '@radix-ui/react-label': ^2.0.2
+      '@radix-ui/react-popover': ^1.1.1
       '@radix-ui/react-select': ^2.1.1
       '@radix-ui/react-separator': ^1.0.3
       '@radix-ui/react-slot': ^1.0.2
@@ -97,6 +98,7 @@ importers:
       '@radix-ui/react-dialog': 1.0.5_28d2685ba3ab097306fac2eaae8961ae
       '@radix-ui/react-dropdown-menu': 2.0.6_28d2685ba3ab097306fac2eaae8961ae
       '@radix-ui/react-label': 2.0.2_28d2685ba3ab097306fac2eaae8961ae
+      '@radix-ui/react-popover': 1.1.1_28d2685ba3ab097306fac2eaae8961ae
       '@radix-ui/react-select': 2.1.1_28d2685ba3ab097306fac2eaae8961ae
       '@radix-ui/react-separator': 1.0.3_28d2685ba3ab097306fac2eaae8961ae
       '@radix-ui/react-slot': 1.0.2_33f8a78333d39e792d8bea208e397308
@@ -1493,6 +1495,40 @@ packages:
       react-remove-scroll: 2.5.5_33f8a78333d39e792d8bea208e397308
     dev: false
 
+  /@radix-ui/react-popover/1.1.1_28d2685ba3ab097306fac2eaae8961ae:
+    resolution: {integrity: sha512-3y1A3isulwnWhvTTwmIreiB8CF4L+qRjZnK1wYLO7pplddzXKby/GnZ2M7OZY3qgnl6p9AodUIHRYGXNah8Y7g==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@radix-ui/primitive': 1.1.0
+      '@radix-ui/react-compose-refs': 1.1.0_33f8a78333d39e792d8bea208e397308
+      '@radix-ui/react-context': 1.1.0_33f8a78333d39e792d8bea208e397308
+      '@radix-ui/react-dismissable-layer': 1.1.0_28d2685ba3ab097306fac2eaae8961ae
+      '@radix-ui/react-focus-guards': 1.1.0_33f8a78333d39e792d8bea208e397308
+      '@radix-ui/react-focus-scope': 1.1.0_28d2685ba3ab097306fac2eaae8961ae
+      '@radix-ui/react-id': 1.1.0_33f8a78333d39e792d8bea208e397308
+      '@radix-ui/react-popper': 1.2.0_28d2685ba3ab097306fac2eaae8961ae
+      '@radix-ui/react-portal': 1.1.1_28d2685ba3ab097306fac2eaae8961ae
+      '@radix-ui/react-presence': 1.1.0_28d2685ba3ab097306fac2eaae8961ae
+      '@radix-ui/react-primitive': 2.0.0_28d2685ba3ab097306fac2eaae8961ae
+      '@radix-ui/react-slot': 1.1.0_33f8a78333d39e792d8bea208e397308
+      '@radix-ui/react-use-controllable-state': 1.1.0_33f8a78333d39e792d8bea208e397308
+      '@types/react': 18.3.3
+      '@types/react-dom': 18.3.0
+      aria-hidden: 1.2.4
+      react: 19.0.0-rc-f994737d14-20240522
+      react-dom: 19.0.0-rc-f994737d14-20240522_c1f0a4aac925d6b31970f53733fd2a64
+      react-remove-scroll: 2.5.7_33f8a78333d39e792d8bea208e397308
+    dev: false
+
   /@radix-ui/react-popper/1.1.3_28d2685ba3ab097306fac2eaae8961ae:
     resolution: {integrity: sha512-cKpopj/5RHZWjrbF2846jBNacjQVwkP068DfmgrNJXpvVWrOvlAmE9xSiy5OqeE+Gi8D9fP+oDhUnPqNMY8/5w==}
     peerDependencies:
@@ -1610,6 +1646,27 @@ packages:
       '@babel/runtime': 7.24.4
       '@radix-ui/react-compose-refs': 1.0.1_33f8a78333d39e792d8bea208e397308
       '@radix-ui/react-use-layout-effect': 1.0.1_33f8a78333d39e792d8bea208e397308
+      '@types/react': 18.3.3
+      '@types/react-dom': 18.3.0
+      react: 19.0.0-rc-f994737d14-20240522
+      react-dom: 19.0.0-rc-f994737d14-20240522_c1f0a4aac925d6b31970f53733fd2a64
+    dev: false
+
+  /@radix-ui/react-presence/1.1.0_28d2685ba3ab097306fac2eaae8961ae:
+    resolution: {integrity: sha512-Gq6wuRN/asf9H/E/VzdKoUtT8GC9PQc9z40/vEr0VCJ4u5XvvhWIrSsCB6vD2/cH7ugTdSfYq9fLJCcM00acrQ==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@radix-ui/react-compose-refs': 1.1.0_33f8a78333d39e792d8bea208e397308
+      '@radix-ui/react-use-layout-effect': 1.1.0_33f8a78333d39e792d8bea208e397308
       '@types/react': 18.3.3
       '@types/react-dom': 18.3.0
       react: 19.0.0-rc-f994737d14-20240522
