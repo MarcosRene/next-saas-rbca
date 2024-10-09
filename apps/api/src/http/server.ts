@@ -116,7 +116,7 @@ app.register(getOrganizationBilling)
 
 app
   .listen({
-    port: env.SERVER_PORT,
+    port: env.PORT,
   })
   .then(() => {
     console.log('HTTP server running!')
